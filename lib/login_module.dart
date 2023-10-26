@@ -25,7 +25,7 @@ class _CounterWidgetState extends State<CounterWidget> {
             const SizedBox(height: 10,),
             ElevatedButton(onPressed: (){
               setState(() {
-                count = count+2;
+                count = count+1;
               });
             }, child: const Text("add"))
           ],
