@@ -1,0 +1,9 @@
+# This is a generated file; do not edit or check into version control.
+cloud_firestore=/Users/macm-21/.pub-cache/hosted/pub.dev/cloud_firestore-4.12.1/
+cloud_firestore_web=/Users/macm-21/.pub-cache/hosted/pub.dev/cloud_firestore_web-3.8.2/
+cloud_functions=/Users/macm-21/.pub-cache/hosted/pub.dev/cloud_functions-4.5.2/
+cloud_functions_web=/Users/macm-21/.pub-cache/hosted/pub.dev/cloud_functions_web-4.6.5/
+firebase_auth=/Users/macm-21/.pub-cache/hosted/pub.dev/firebase_auth-4.12.0/
+firebase_auth_web=/Users/macm-21/.pub-cache/hosted/pub.dev/firebase_auth_web-5.8.5/
+firebase_core=/Users/macm-21/.pub-cache/hosted/pub.dev/firebase_core-2.20.0/
+firebase_core_web=/Users/macm-21/.pub-cache/hosted/pub.dev/firebase_core_web-2.8.1/
