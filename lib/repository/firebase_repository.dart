@@ -26,7 +26,7 @@ class FirebaseRepository {
 
   Future<UserCredential?> signInWithEmailPassword(String email , String password) async {
     try {
-      UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+      UserCredential? userCredential = await auth?.signInWithEmailAndPassword(
           email: email,
           password: password
       );
@@ -40,9 +40,9 @@ class FirebaseRepository {
     }
   }
 
-  Future<UserCredential> signUpWithEmailPassword(String email , String password) async {
+  Future<UserCredential?> signUpWithEmailPassword(String email , String password) async {
     try{
-      UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
+      UserCredential? userCredential = await auth?.createUserWithEmailAndPassword(email: email, password: password);
       return userCredential;
     } on FirebaseAuthException catch (e) {
       throw CustomException(e.message);
@@ -52,10 +52,14 @@ class FirebaseRepository {
   Future<bool> passwordReset(String email) async {
     try{
       var isSend = false;
-      await FirebaseAuth.instance.sendPasswordResetEmail(email: email).then((value) => isSend = true ).catchError((e)=> throw CustomException(e.toString()));
+      await auth?.sendPasswordResetEmail(email: email).then((value) => isSend = true ).catchError((e)=> throw CustomException(e.toString()));
       return isSend;
     } on FirebaseAuthException catch (e) {
       throw CustomException(e.message);
     }
+  }
+
+  User? getCurrentUser(){
+    return auth?.currentUser;
   }
 }

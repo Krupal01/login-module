@@ -53,4 +53,12 @@ class LoginBloc extends Cubit<LoginState> {
       emit(Error(message: e.message ?? ""));
     }
   }
+
+  bool isLogin() {
+    if(firebaseRepository.getCurrentUser() != null){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }

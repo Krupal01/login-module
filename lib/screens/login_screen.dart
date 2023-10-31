@@ -7,7 +7,8 @@ import 'package:login_module/screens/signup_screen.dart';
 import 'package:login_module/utils/ui_utils.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  const LoginScreen({super.key, this.runAfterLogin});
+  final Function? runAfterLogin;
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -90,6 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         if (state is LoginSuccess) {
                           ScaffoldMessenger.of(context)
                               .showSnackBar(getSnackBar("Login Success"));
+                          widget.runAfterLogin?.call();
                         }
                       },
                       builder: (context, state) {
