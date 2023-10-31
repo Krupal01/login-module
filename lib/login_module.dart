@@ -3,11 +3,11 @@ library login_module;
 import 'package:flutter/material.dart';
 import 'package:login_module/screens/login_screen.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: LoginScreen(),
-  ));
-}
+// void main() {
+//   runApp(MaterialApp(
+//     home: LoginScreen(),
+//   ));
+// }
 
 /*class CounterWidget extends StatefulWidget {
   const CounterWidget({super.key});
